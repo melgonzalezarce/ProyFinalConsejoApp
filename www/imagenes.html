@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>ConsejoFMatApp</title>
+        <meta charset="UTF-8">
+        <!-- Poder agregar iconos -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Cargamos el CSS -->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="css/custom.css"/>
+    </head>
+    <body>
+        <!--PANEL-->
+        <header>
+            <nav>
+                <ul id="slide-out" class="side-nav">
+                    <li><a href="novedades.html" class="waves-effect"><i class="tiny material-icons">new_releases</i>   Novedades</a></li>
+                    <li><a href="eventosprox.html" class="waves-effect"><i class="tiny material-icons">today</i>   Eventos Próximos</a></li>
+                    <li><a href="contactanos.html" class="waves-effect"><i class="tiny material-icons">contact_phone</i>   Contáctanos</a></li>
+                    <li><a href="escribenos.html" class="waves-effect"><i class="tiny material-icons">textsms</i>   Escríbenos</a></li>
+                    <li><a href="infoAcad.html" class="waves-effect"><i class="tiny material-icons">work</i>   Información Académica</a>
+                </ul>
+                <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
+            </nav>
+        </header>
+
+        <main>
+            <!--Imagenes-->
+            <section data-role="page" id="imagenes">
+                <div class="slider">
+                    <ul class="slides">
+                        <li>
+                            <img src="img/DSC_1453.jpg"> <!-- random image -->
+                            <div class="caption center-align">
+                                <h3>This is our big Tagline!</h3>
+                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/DSC_1453.jpg"> <!-- random image -->
+                            <div class="caption left-align">
+                                <h3>Left Aligned Caption</h3>
+                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/DSC_1453.jpg"> <!-- random image -->
+                            <div class="caption right-align">
+                                <h3>Right Aligned Caption</h3>
+                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/DSC_1453.jpg"> <!-- random image -->
+                            <div class="caption center-align">
+                                <h3>This is our big Tagline!</h3>
+                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer" class="page-footer black lighten-2">
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2015 Consejo Estudiantil
+                    <a class="grey-text text-lighten-4 right" href="https://www.facebook.com/cestudiantilfmat/">Web</a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Cargamos jQuery y materialize js -->
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                //Menú responsivo
+                $('.button-collapse').sideNav({
+                            menuWidth: 240,
+                            edge: 'left',
+                            closeOnClick: true
+                        }
+                );
+            });
+        </script>
+    </body>
+</html>
