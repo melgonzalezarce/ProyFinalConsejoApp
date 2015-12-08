@@ -2,9 +2,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
     $(".hideNewBtn").click(function () {
-        hideNew(this);
+        $(this).parents('.hideNew').remove();
     });
 }
-function hideNew(e) {
-    $(e).parents('.hideNew').remove();
-}
+

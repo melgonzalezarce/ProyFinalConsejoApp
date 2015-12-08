@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        #map {
+            height: 100%;
+        }
+    </style>
     <title>ConsejoFMatApp</title>
     <meta charset="UTF-8">
     <!-- Poder agregar iconos -->
@@ -9,7 +14,9 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
 
     <script type="text/javascript" src="cordova.js"></script>
-    <script src="js/futureEvents.js"></script>
+    <script src="js/googlemaps.js"></script>
+    <script src="js/howToArrive.js"></script>
+
 </head>
 <body>
 <!--PANEL-->
@@ -44,28 +51,15 @@
 </header>
 
 <main>
-    <!--Eventos Próximos-->
-    <section data-role="page" id="eventosprox">
-        <button class="btn btn-large howToArrive"></button>
-        <input type="hidden" value="21.048018, -89.644288" class="latlng">
-        <table>
-            <tr>
-                <th style="align-contentl: right"><img id="img" class="materialboxed" src="img/SemanaEstudianteV2.jpg"
-                                                       alt="" height="30%" width="30%"></th>
-                <th style="align-content: left">
-                    <a href="comoLlegar.html"><i class="large material-icons">location_on</i>¿Cómo llegar?</a>
-                    <input type="hidden" value="21.0158932,-89.658107" class="latlng">
-                </th>
-            </tr>
-            <tr>
-                <td>Hora</td>
-                <td>7:00 a 11:00</td>
-            </tr>
-            <tr>
-                <td>Fecha</td>
-                <td>23/11/2015</td>
-            </tr>
-        </table>
+    <!--Como llegar-->
+    <section data-role="page" id="comollegar">
+        <div style="height: 250px; width: 250px">
+            <div id="map">
+
+            </div>
+        </div>
+
+
     </section>
 </main>
 
