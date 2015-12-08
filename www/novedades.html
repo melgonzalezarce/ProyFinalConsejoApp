@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="#9e9e9e grey">
     <head>
         <title>ConsejoFMatApp</title>
         <meta charset="UTF-8">
@@ -12,60 +12,98 @@
     <body>
         <!--PANEL-->
         <header>
-            <nav>
-                <ul id="slide-out" class="side-nav ">
-                    <li><a href="novedades.html" class="waves-effect"><i class="tiny material-icons">new_releases</i>   Novedades</a></li>
-                    <li><a href="eventosprox.html" class="waves-effect"><i class="tiny material-icons">today</i>   Eventos Próximos</a></li>
-                    <li><a href="contactanos.html" class="waves-effect"><i class="tiny material-icons">contact_phone</i>   Contáctanos</a></li>
-                    <li><a href="escribenos.html" class="waves-effect"><i class="tiny material-icons">textsms</i>   Escríbenos</a></li>
-                    <li><a href="infoAcad.html" class="waves-effect"><i class="tiny material-icons">work</i>   Información Académica</a>
-                    <li><a href="imagenes.html" class="waves-effect"><i class="tiny material-icons">work</i>   Imagenes</a>
+            <nav class="#000000 black lighten-4 ">
+                <ul id="slide-out" class="side-nav">
+                    <li>
+                        <div class="contactoPanel">
+                            <img src="img/profile.jpg" alt="" class="circle responsive-img">
+                        </div>
+                        <p class="#000000 black-text"><i class="tiny material-icons">face</i> Romario López Castillo</p>
+                    </li>
+                    <li><a href="novedades.html" class="waves-effect"><i class="tiny material-icons">new_releases</i>
+                        Novedades</a></li>
+                    <li><a href="eventosprox.html" class="waves-effect"><i class="tiny material-icons">today</i> Eventos
+                        Próximos</a></li>
+                    <li><a href="contactanos.html" class="waves-effect"><i class="tiny material-icons">contact_phone</i>
+                        Contáctanos</a></li>
+                    <li><a href="escribenos.html" class="waves-effect"><i class="tiny material-icons">textsms</i>
+                        Escríbenos</a></li>
+                    <li><a href="infoAcad.html" class="waves-effect"><i class="tiny material-icons">school</i>
+                        Información Académica</a>
+                    <li><a href="imagenes.html" class="waves-effect"><i class="tiny material-icons">view_carousel</i>
+                        Cuponera</a>
+                    <li><a href="acercaDe.html" class="waves-effect"><i class="tiny material-icons">android</i> Acerca
+                        de... </a>
                 </ul>
-                <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
+                <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i
+                        class="medium material-icons">reorder</i></a>
+                Novedades
             </nav>
         </header>
 
         <main>
             <!--Novedades-->
             <section data-role="page" id="novedades">
-                <div class="card-panel blue lighten-3">
-                    <strong>Noticia 1</strong>
-                    <div class="col s12 m6 ">
-                        <p> Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in,
-                        eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id.
-                        Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos.
-                        Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu,
-                        eirmod consectetuer signiferumque eu per. In usu latine equidem dolores.
-                        Quo no falli viris intellegam, ut fugit veritus placerat per.
-                        </p>
-                    </div>
-                    <div class="col s12 m2 ">
-                        iconos
-                    </div>
-                </div>
-                <div class="card-panel blue lighten-3">
-                    <strong>Noticia 2</strong>
-
-                    <p> Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in,
-                        eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id.
-                        Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos.
-                        Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu,
-                        eirmod consectetuer signiferumque eu per. In usu latine equidem dolores.
-                        Quo no falli viris intellegam, ut fugit veritus placerat per.
-                    </p>
-                    <!-- <i class="small mdi-action-list"></i> -->
-                </div>
-                <div class="card-panel blue lighten-3">
-                    <strong>Noticia 3</strong>
-
-                    <p> Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in,
-                        eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id.
-                        Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos.
-                        Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu,
-                        eirmod consectetuer signiferumque eu per. In usu latine equidem dolores.
-                        Quo no falli viris intellegam, ut fugit veritus placerat per.
-                    </p>
-                </div>
+                <ul class="collapsible popout" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Calendario de
+                            Exámenes Ordinarios</strong></div>
+                        <div class="collapsible-body card-panel blue lighten-3">
+                            <p> Ya se encuentra publicada la calendarización de exámenes ordinarios correspondientes
+                                al semestre Agosto-Diciembre 2015. </p>
+                            <i class="small material-icons">visibility</i> <i class="small material-icons">publish</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Noticia 2</strong></div>
+                        <div class="collapsible-body card-panel light-green accent-2">
+                            <p> Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in,
+                                eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint
+                                id.
+                                Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos.
+                                Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu,
+                                eirmod consectetuer signiferumque eu per. In usu latine equidem dolores.
+                                Quo no falli viris intellegam, ut fugit veritus placerat per. </p>
+                            <i class="small material-icons">visibility</i> <i class="small material-icons">publish</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Noticia 3</strong></div>
+                        <div class="collapsible-body card-panel #ffb74d orange lighten-2">
+                            <p> Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in,
+                                eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id.
+                                Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos.
+                                Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu,
+                                eirmod consectetuer signiferumque eu per. In usu latine equidem dolores.
+                                Quo no falli viris intellegam, ut fugit veritus placerat per. </p>
+                            <i class="small material-icons">visibility</i> <i class="small material-icons">publish</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Noticia 4</strong></div>
+                        <div class="collapsible-body card-panel #ffb74d orange lighten-2">
+                            <p> Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in,
+                                eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id.
+                                Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos.
+                                Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu,
+                                eirmod consectetuer signiferumque eu per. In usu latine equidem dolores.
+                                Quo no falli viris intellegam, ut fugit veritus placerat per. </p>
+                            <i class="small material-icons">visibility</i> <i class="small material-icons">publish</i>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Noticia 5</strong></div>
+                        <div class="collapsible-body card-panel #ffb74d orange lighten-2">
+                            <p> Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in,
+                                eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id.
+                                Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos.
+                                Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu,
+                                eirmod consectetuer signiferumque eu per. In usu latine equidem dolores.
+                                Quo no falli viris intellegam, ut fugit veritus placerat per. </p>
+                            <i class="small material-icons">visibility</i> <i class="small material-icons">publish</i>
+                        </div>
+                    </li>
+                </ul>
             </section>
         </main>
 
@@ -90,6 +128,10 @@
                             closeOnClick: true
                         }
                 );
+                this.$('.collapsible').collapsible();
+                $('.collapsible').collapsible({
+                    accordion: true // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+                });
             });
         </script>
     </body>
