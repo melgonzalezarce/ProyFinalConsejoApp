@@ -12,15 +12,32 @@
     <body>
         <!--PANEL-->
         <header>
-            <nav>
+            <nav class="#000000 black lighten-4 ">
                 <ul id="slide-out" class="side-nav">
-                    <li><a href="novedades.html" class="waves-effect"><i class="tiny material-icons">new_releases</i>   Novedades</a></li>
-                    <li><a href="eventosprox.html" class="waves-effect"><i class="tiny material-icons">today</i>   Eventos Próximos</a></li>
-                    <li><a href="contactanos.html" class="waves-effect"><i class="tiny material-icons">contact_phone</i>   Contáctanos</a></li>
-                    <li><a href="escribenos.html" class="waves-effect"><i class="tiny material-icons">textsms</i>   Escríbenos</a></li>
-                    <li><a href="infoAcad.html" class="waves-effect"><i class="tiny material-icons">work</i>   Información Académica</a>
+                    <li>
+                        <div class="contactoPanel">
+                            <img src="img/profile.jpg" alt="" class="circle responsive-img">
+                        </div>
+                        <p class="#000000 black-text"><i class="tiny material-icons">face</i> Romario López Castillo</p>
+                    </li>
+                    <li><a href="novedades.html" class="waves-effect"><i class="tiny material-icons">new_releases</i>
+                        Novedades</a></li>
+                    <li><a href="eventosprox.html" class="waves-effect"><i class="tiny material-icons">today</i> Eventos
+                        Próximos</a></li>
+                    <li><a href="contactanos.html" class="waves-effect"><i class="tiny material-icons">contact_phone</i>
+                        Contáctanos</a></li>
+                    <li><a href="escribenos.html" class="waves-effect"><i class="tiny material-icons">textsms</i>
+                        Escríbenos</a></li>
+                    <li><a href="infoAcad.html" class="waves-effect"><i class="tiny material-icons">school</i>
+                        Información Académica</a>
+                    <li><a href="imagenes.html" class="waves-effect"><i class="tiny material-icons">view_carousel</i>
+                        Cuponera</a>
+                    <li><a href="acercaDe.html" class="waves-effect"><i class="tiny material-icons">android</i> Acerca
+                        de... </a>
                 </ul>
-                <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="mdi-navigation-menu"></i></a>
+                <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i
+                        class="medium material-icons">reorder</i></a>
+                Imágenes
             </nav>
         </header>
 
@@ -32,29 +49,33 @@
                         <li>
                             <img src="img/DSC_1453.jpg"> <!-- random image -->
                             <div class="caption center-align">
-                                <h3>This is our big Tagline!</h3>
-                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                                <h3>Rosca de Reyes</h3>
+                                <h5 class="light grey-text text-lighten-3">UABIC</h5>
                             </div>
                         </li>
                         <li>
-                            <img src="img/DSC_1453.jpg"> <!-- random image -->
+                            <img src="img/ALTARES.jpg">
                             <div class="caption left-align">
-                                <h3>Left Aligned Caption</h3>
-                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                                <h3>Concurso de Altares</h3>
+                                <h5 class="light grey-text text-lighten-3">FMAT vs. FI</h5>
                             </div>
                         </li>
                         <li>
-                            <img src="img/DSC_1453.jpg"> <!-- random image -->
+                            <img src="img/FINALES.jpg">
                             <div class="caption right-align">
-                                <h3>Right Aligned Caption</h3>
-                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                                <h3>¡Lobas CAMPEONAS!</h3>
+                                <h5 class="light grey-text text-lighten-3">Finales de JDU.</h5>
                             </div>
                         </li>
                         <li>
-                            <img src="img/DSC_1453.jpg"> <!-- random image -->
-                            <div class="caption center-align">
-                                <h3>This is our big Tagline!</h3>
-                                <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                            <img src="img/LICENCIAS.jpg">
+                            <div class="caption center-align"></div>
+                        </li>
+                        <li>
+                            <img src="img/RALLY.jpg">
+                            <div class="caption right-align">
+                                <h3>¡Rally de Inducción!</h3>
+                                <h5 class="light grey-text text-lighten-3">Alumnos de Primer Ingreso.</h5>
                             </div>
                         </li>
                     </ul>
@@ -83,6 +104,9 @@
                             closeOnClick: true
                         }
                 );
+
+                // Plugin initialization slider
+                $('.slider').slider();
             });
         </script>
     </body>
