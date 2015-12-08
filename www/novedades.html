@@ -7,7 +7,9 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- Cargamos el CSS -->
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
-        <link type="text/css" rel="stylesheet" href="css/custom.css"/>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script src="js/general.js"></script>
     </head>
     <body>
         <!--PANEL-->
@@ -45,16 +47,16 @@
             <!--Novedades-->
             <section data-role="page" id="novedades">
                 <ul class="collapsible popout" data-collapsible="accordion">
-                    <li>
+                    <li class="hideNew">
                         <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Calendario de
                             Exámenes Ordinarios</strong></div>
                         <div class="collapsible-body card-panel blue lighten-3">
                             <p> Ya se encuentra publicada la calendarización de exámenes ordinarios correspondientes
                                 al semestre Agosto-Diciembre 2015. </p>
-                            <i class="small material-icons hideNew">visibility</i> <i class="small material-icons">publish</i>
+                            <i class="small material-icons hideNewBtn">visibility</i> <i class="small material-icons">publish</i>
                         </div>
                     </li>
-                    <li>
+                    <li class="hideNew">
                         <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Noticia 2</strong></div>
                         <div class="collapsible-body card-panel light-green accent-2">
                             <p> Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in,
@@ -64,10 +66,10 @@
                                 Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu,
                                 eirmod consectetuer signiferumque eu per. In usu latine equidem dolores.
                                 Quo no falli viris intellegam, ut fugit veritus placerat per. </p>
-                            <i class="small material-icons">visibility</i> <i class="small material-icons">publish</i>
+                            <i class="small material-icons hideNewBtn">visibility</i> <i class="small material-icons">publish</i>
                         </div>
                     </li>
-                    <li>
+                    <li class="hideNew">
                         <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Noticia 3</strong></div>
                         <div class="collapsible-body card-panel #ffb74d orange lighten-2">
                             <p> Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in,
@@ -76,10 +78,10 @@
                                 Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu,
                                 eirmod consectetuer signiferumque eu per. In usu latine equidem dolores.
                                 Quo no falli viris intellegam, ut fugit veritus placerat per. </p>
-                            <i class="small material-icons">visibility</i> <i class="small material-icons">publish</i>
+                            <i class="small material-icons hideNewBtn">visibility</i> <i class="small material-icons">publish</i>
                         </div>
                     </li>
-                    <li>
+                    <li class="hideNew">
                         <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Noticia 4</strong></div>
                         <div class="collapsible-body card-panel #ffb74d orange lighten-2">
                             <p> Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in,
@@ -88,10 +90,10 @@
                                 Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu,
                                 eirmod consectetuer signiferumque eu per. In usu latine equidem dolores.
                                 Quo no falli viris intellegam, ut fugit veritus placerat per. </p>
-                            <i class="small material-icons">visibility</i> <i class="small material-icons">publish</i>
+                            <i class="small material-icons hideNewBtn">visibility</i> <i class="small material-icons">publish</i>
                         </div>
                     </li>
-                    <li>
+                    <li class="hideNew">
                         <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Noticia 5</strong></div>
                         <div class="collapsible-body card-panel #ffb74d orange lighten-2">
                             <p> Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in,
@@ -100,7 +102,7 @@
                                 Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu,
                                 eirmod consectetuer signiferumque eu per. In usu latine equidem dolores.
                                 Quo no falli viris intellegam, ut fugit veritus placerat per. </p>
-                            <i class="small material-icons">visibility</i> <i class="small material-icons">publish</i>
+                            <i class="small material-icons hideNewBtn">visibility</i> <i class="small material-icons">publish</i>
                         </div>
                     </li>
                 </ul>
@@ -128,7 +130,7 @@
                             closeOnClick: true
                         }
                 );
-                this.$('.collapsible').collapsible();
+                $('.collapsible').collapsible();
                 $('.collapsible').collapsible({
                     accordion: true // A setting that changes the collapsible behavior to expandable instead of the default accordion style
                 });
