@@ -4,15 +4,18 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-    $(".phonecall").click(function () {
-        callNumber(this);
-    });
+    document.addEventListener("backbutton", onBackKeyDown, false);
+    document.addEventListener("volumeupbutton", showSideNav, false);
 
-    $(".sendMsg").click(function () {
-        sendSms(this);
-    });
+}
 
-    $(".addContact").click(function () {
-        addContact(this);
-    });
+function showSideNav() {
+    $('.button-collapse').sideNav('show');
+}
+
+function sendSuggestion() {
+
+}
+function onBackKeyDown(e) {
+    e.preventDefault();
 }
