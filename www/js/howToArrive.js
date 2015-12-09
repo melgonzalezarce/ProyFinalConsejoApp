@@ -1,8 +1,12 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
+    document.addEventListener("backbutton", onBackKeyDown, false);
     navigator.geolocation.getCurrentPosition(onSuccessPosition, onErrorPosition);
+}
 
+function onBackKeyDown(e) {
+    e.preventDefault();
 }
 
 function onErrorPosition() {

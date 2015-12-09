@@ -1,6 +1,8 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
+    document.addEventListener("backbutton", onBackKeyDown, false);
+
     $(".phonecall").click(function () {
         callNumber(this);
     });
@@ -8,11 +10,14 @@ function onDeviceReady() {
     $(".sendMsg").click(function () {
         sendSms(this);
     });
-
     $(".addContact").click(function () {
         addContact(this);
     });
 }
+function onBackKeyDown(e) {
+    e.preventDefault();
+}
+
 
 function addContact(phone) {
     var number = $(phone).siblings('.phonenumber').val();
