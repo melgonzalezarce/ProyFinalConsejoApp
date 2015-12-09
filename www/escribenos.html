@@ -42,7 +42,76 @@
         <main>
             <!--Escríbenos-->
             <section data-role="page" id="escribenos">
-
+                <div class="container">
+                    <div class="row">
+                        <div class="col m10 offset-m1 s12">
+                            <h2 class="center-align">Escríbenos</h2>
+                            <div class="row">
+                                <form class="col s12">
+                                    <div class="row">
+                                        <div class="input-field col m6 s12">
+                                            <input id="nombre" type="text" class="validate">
+                                            <label for="nombre">Nombre</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <label for="carrera">Carrera</label>
+                                            <br/>
+                                        </div>
+                                        <div class="input-field col s12">
+                                            <select class="browser-default" id="carrera">
+                                                <option value="" selected disabled>Selecciona tu carrera:</option>
+                                                <option value="1">LA</option>
+                                                <option value="2">LCC</option>
+                                                <option value="3">LEM</option>
+                                                <option value="4">LIC</option>
+                                                <option value="5">LIS</option>
+                                                <option value="6">LM</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="divider"></div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <label>Tipo de Mensaje</label>
+                                            <br/>
+                                        </div>
+                                        <div class="input-field col m3 s4 center-align">
+                                            <input name="group1" type="radio" id="queja" />
+                                            <label for="queja">Queja</label>
+                                        </div>
+                                        <div class="input-field col m3 s4 center-align">
+                                            <input name="group1" type="radio" id="sugerencia" />
+                                            <label for="sugerencia">Sugerencia</label>
+                                        </div>
+                                        <div class="input-field col m3 s4 center-align">
+                                            <input name="group1" type="radio" id="comentario" />
+                                            <label for="comentario">Comentario</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="input-field col s12">
+                                            <textarea id="mensaje" class="materialize-textarea"></textarea>
+                                            <label for="mensaje">Mensaje</label>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col m12">
+                                            <p class="right-align">
+                                                <button class="btn btn-floating btn-large waves-effect waves-light" type="button" name="action">
+                                                    <i class="small material-icons">send</i>
+                                                    <!--debe guardar el msj en la bd y llevar a la pagina mensaje.html
+                                                    donde se muestran los msjs y tiene un back hacia novedades-->
+                                                </button>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
 
