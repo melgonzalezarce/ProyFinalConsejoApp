@@ -2,7 +2,6 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
     navigator.geolocation.getCurrentPosition(onSuccessPosition, onErrorPosition);
-    alert("navigator.geolocation works well");
 
 }
 
@@ -11,7 +10,6 @@ function onErrorPosition() {
 }
 var onSuccessPosition = function (position) {
     var latlng = window.localStorage.getItem('destination');
-    alert(latlng);
     var lat = parseFloat(latlng.split(',')[0]);
     var lng = parseFloat(latlng.split(',')[1]);
     initMap(position.coords.latitude, position.coords.longitude, lat, lng);

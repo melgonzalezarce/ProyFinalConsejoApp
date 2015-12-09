@@ -1,17 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        #map {
-            height: 100%;
-        }
-    </style>
     <title>ConsejoFMatApp</title>
     <meta charset="UTF-8">
     <!-- Poder agregar iconos -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Cargamos el CSS -->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+
+    <link rel="stylesheet" href="css/map.css">
 
     <script type="text/javascript" src="cordova.js"></script>
     <script src="js/googlemaps.js"></script>
@@ -53,13 +50,7 @@
 <main>
     <!--Como llegar-->
     <section data-role="page" id="comollegar">
-        <div style="height: 250px; width: 250px">
-            <div id="map">
-
-            </div>
-        </div>
-
-
+        <div id="map"></div>
     </section>
 </main>
 
