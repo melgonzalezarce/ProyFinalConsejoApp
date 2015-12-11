@@ -29,21 +29,21 @@
                     <img src="img/LogoCEFMAT_blanco.png" alt="" height="70%" width="70%">
                     <br/>
                     <br/>
-                    <div class="row #e3f2fd blue lighten-5">
+                    <div class="row #e3f2fd blue lighten-5 black-text">
                         <form class="col s12">
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input id="nombre_usuario" type="text" class="validate">
+                                    <input id="nombre_usuario" type="text" class="validate" required>
                                     <label for="nombre_usuario">Nombre de usuario</label>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <input id="password" type="password" class="validate">
+                                    <input id="password" type="password" class="validate" required>
                                     <label for="password">Contraseña</label>
                                 </div>
                             </div>
-                            <button onclick="login()" class="waves-effect waves-blue #1565c0 blue darken-3 white-text btn-flat">Ingresar</button>
+                            <button onclick="login(); return false;" class="waves-effect waves-blue #1565c0 blue darken-3 white-text btn-flat">Ingresar</button>
                         </form>
                     </div>
                 </div>

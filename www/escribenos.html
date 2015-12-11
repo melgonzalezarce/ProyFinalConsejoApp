@@ -82,15 +82,15 @@
                                             <br/>
                                         </div>
                                         <div class="input-field col m3 s4 center-align">
-                                            <input name="group1" type="radio" id="queja" required/>
+                                            <input name="group1" type="radio" id="queja" required value="Queja"/>
                                             <label for="queja">Queja</label>
                                         </div>
                                         <div class="input-field col m3 s4 center-align">
-                                            <input name="group1" type="radio" id="sugerencia" />
+                                            <input name="group1" type="radio" id="sugerencia" value="Sugerencia"/>
                                             <label for="sugerencia">Sugerencia</label>
                                         </div>
                                         <div class="input-field col m3 s4 center-align">
-                                            <input name="group1" type="radio" id="comentario" />
+                                            <input name="group1" type="radio" id="comentario" value="Comentario"/>
                                             <label for="comentario">Comentario</label>
                                         </div>
                                     </div>
@@ -103,7 +103,8 @@
                                     <div class="row">
                                         <div class="col m12">
                                             <p class="right-align">
-                                                <button class="btn btn-floating btn-large waves-effect waves-light" type="button" name="action">
+                                                <button class="btn btn-floating btn-large waves-effect waves-light" type="button" name="action"
+                                                onclick="sendSuggestion();">
                                                     <i class="small material-icons">send</i>
                                                     <!--debe guardar el msj en la bd y llevar a la pagina mensaje.html
                                                     donde se muestran los msjs y tiene un back hacia novedades-->

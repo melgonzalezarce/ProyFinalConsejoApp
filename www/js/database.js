@@ -4,35 +4,21 @@ var db;
 
 function onDeviceReady() {
     db = window.openDatabase("consejofmat", "1.0", "Consejo FMAT", 200000);
-    db.transaction(populateDBUsers, errorDB, SuccessDBUsers);
-
+    db.transaction(populateDBUsers, errorDB);
 }
 
 function populateDBUsers(tx) {
     tx.executeSql('DROP TABLE IF EXISTS users');
-    tx.executeSql('CREATE TABLE IF NOT EXISTS users (id unique, name, password)');
-    tx.executeSql('CREATE TABLE IF NOT EXISTS posts (id unique, student_name, carreer, message_type, message)');
+    tx.executeSql('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, name, password)');
+    tx.executeSql('CREATE TABLE IF NOT EXISTS posts (id INTEGER PRIMARY KEY AUTOINCREMENT, student_name, career, message_type, message)');
 
-    tx.executeSql('INSERT INTO users (id, name, password) VALUES (1, "meli", "123")');
+    tx.executeSql('INSERT INTO users (name, password) VALUES ("Meli", "123")');
+    tx.executeSql('INSERT INTO users (name, password) VALUES ("Romario", "123")');
 
-    alert('Base de datos creada de usuarios y posts(escribenos)');
-}
-
-function queryDBUsers(tx) {
-    tx.executeSql('SELECT * FROM avengers', [], querySuccessUsers, errorDB);
-}
-
-// Query the success callback
-//
-function querySuccessUsers(tx, results) {
 }
 
 function errorDB(err) {
     alert("Error processing SQL: " + err.code + ", " + err.message);
-}
-function SuccessDBUsers() {
-    //var db = window.openDatabase("Superheroes", "1.0", "Superheroes", 200000);
-    //db.transaction(queryDBUsers, errorDB);
 }
 
 function checkUserCrentendials(tx) {
@@ -47,14 +33,16 @@ function querySuccessCheckUserCredentials(tx, results) {
 
     for (var i = 0; i < len; i++) {
         if (results.rows.item(i).name == userName && results.rows.item(i).password == password) {
-            Materialize.toast('Bienvenido ' + userName, 2000);
             window.location.href = 'novedades.html';
         }
     }
-
     Materialize.toast('Usuario/Contraseña inválidos', 2000);
-
 }
+
 function login() {
-    db.transaction(checkUserCrentendials, errorDB);
+    if($('#nombre_usuario').val() == '' || $('#password').val() == '') {
+        Materialize.toast('Completar campos', 2000);
+    } else {
+        db.transaction(checkUserCrentendials, errorDB);
+    }
 }
