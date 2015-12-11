@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" style="
-    background: url(img/fondoborroso.PNG) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: 100% auto;">
+<style>
+    html, body {
+        margin: 0 !important;
+        padding: 0 !important;
+        border: 0 !important;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+</style>
+<html lang="en">
 <head>
     <title>ConsejoFMatApp</title>
     <meta charset="UTF-8">
@@ -19,10 +25,12 @@
     <script src="js/contactUs.js"></script>
 
 </head>
-<body>
+<body class="black-text"
+      style="background-image: url('img/fondoborroso.PNG'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100% 100%;">
     <!--PANEL-->
     <header>
-        <nav class="#000000 black lighten-4 ">
+        <nav class="#000000 black lighten-4">
+            <span style="font-size: x-large">Contáctanos</span>
             <ul id="slide-out" class="side-nav">
                 <li>
                     <div class="contactoPanel">
@@ -52,7 +60,6 @@
             </ul>
             <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i
                     class="medium material-icons">reorder</i></a>
-            <a href="#" class="brand-logo">Contáctanos</a>
 
         </nav>
     </header>

@@ -1,131 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>ConsejoFMatApp</title>
-        <meta charset="UTF-8">
-        <!-- Poder agregar iconos -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!-- Cargamos el CSS -->
-        <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+<head>
+    <title>ConsejoFMatApp</title>
+    <meta charset="UTF-8">
+    <!-- Poder agregar iconos -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Cargamos el CSS -->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
 
-        <script type="text/javascript" src="cordova.js"></script>
-        <script src="js/jquery.mobile-1.4.5.min.js"></script>
-        <script src="js/events.js"></script>
-    </head>
-    <body>
-        <!--PANEL-->
-        <header>
-            <nav class="#000000 black lighten-4 ">
-                <ul id="slide-out" class="side-nav">
-                    <li>
-                        <div class="contactoPanel">
-                            <!-- Modal Trigger -->
-                            <button data-target="modal1" class="btn modal-trigger btn-floating white center"
-                                    style="height: 150px; width: 150px;"
-                                    onclick="$('#modal1').openModal();">
-                                <img id="imagenPerfil" src="img/profile.jpg" alt="" class="responsive-img">
-                            </button>
-                        </div>
-                        <p class="#000000 black-text"><i class="tiny material-icons">face</i> Romario López Castillo</p>
-                    </li>
-                    <li><a href="novedades.html" class="waves-effect"><i class="tiny material-icons">new_releases</i>
-                        Novedades</a></li>
-                    <li><a href="eventosprox.html" class="waves-effect"><i class="tiny material-icons">today</i> Eventos
-                        Próximos</a></li>
-                    <li><a href="contactanos.html" class="waves-effect"><i class="tiny material-icons">contact_phone</i>
-                        Contáctanos</a></li>
-                    <li><a href="escribenos.html" class="waves-effect"><i class="tiny material-icons">textsms</i>
-                        Escríbenos</a></li>
-                    <li><a href="infoAcad.html" class="waves-effect"><i class="tiny material-icons">school</i>
-                        Información Académica</a>
-                    <li><a href="cuponera.html" class="waves-effect"><i class="tiny material-icons">view_carousel</i>
-                        Cuponera</a>
-                    <li><a href="acercaDe.html" class="waves-effect"><i class="tiny material-icons">android</i> Acerca
-                        de... </a>
-                </ul>
-                <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i
-                        class="medium material-icons">reorder</i></a>
-                <a href="#" class="brand-logo">Acerca de</a>
-            </nav>
-        </header>
-        <main>
-            <!--Modal-->
-            <div id="modal1" class="modal bottom-sheet">
-                <div class="modal-content">
-                    <h4>Cambiar foto de perfil.</h4>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/events.js"></script>
+</head>
+<body>
+    <!--PANEL-->
+    <header>
+        <nav class="#000000 black lighten-4 ">
+            <span style="font-size: x-large">Acerca de</span>
+            <ul id="slide-out" class="side-nav">
+                <li>
+                    <div class="contactoPanel">
+                        <!-- Modal Trigger -->
+                        <button data-target="modal1" class="btn modal-trigger btn-floating white center"
+                                style="height: 150px; width: 150px;"
+                                onclick="$('#modal1').openModal();">
+                            <img id="imagenPerfil" src="img/profile.jpg" alt="" class="responsive-img">
+                        </button>
+                    </div>
+                    <p class="#000000 black-text"><i class="tiny material-icons">face</i> Romario López Castillo</p>
+                </li>
+                <li><a href="novedades.html" class="waves-effect"><i class="tiny material-icons">new_releases</i>
+                    Novedades</a></li>
+                <li><a href="eventosprox.html" class="waves-effect"><i class="tiny material-icons">today</i> Eventos
+                    Próximos</a></li>
+                <li><a href="contactanos.html" class="waves-effect"><i class="tiny material-icons">contact_phone</i>
+                    Contáctanos</a></li>
+                <li><a href="escribenos.html" class="waves-effect"><i class="tiny material-icons">textsms</i>
+                    Escríbenos</a></li>
+                <li><a href="infoAcad.html" class="waves-effect"><i class="tiny material-icons">school</i>
+                    Información Académica</a>
+                <li><a href="cuponera.html" class="waves-effect"><i class="tiny material-icons">view_carousel</i>
+                    Cuponera</a>
+                <li><a href="acercaDe.html" class="waves-effect"><i class="tiny material-icons">android</i> Acerca
+                    de... </a>
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i
+                    class="medium material-icons">reorder</i></a>
+        </nav>
+    </header>
+    <main>
+        <!--Modal-->
+        <div id="modal1" class="modal bottom-sheet">
+            <div class="modal-content">
+                <h4>Cambiar foto de perfil.</h4>
 
-                    <div class="row">
-                        <div class="col s6 center">
-                            <a href="#" onclick="capturePhoto();"><i class="medium material-icons">camera_alt</i></a>
-                        </div>
-                        <div class="col s6 center">
-                            <a href="#" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);"><i
-                                    class="medium material-icons">perm_media</i></a>
-                        </div>
+                <div class="row">
+                    <div class="col s6 center">
+                        <a href="#" onclick="capturePhoto();"><i class="medium material-icons">camera_alt</i></a>
+                    </div>
+                    <div class="col s6 center">
+                        <a href="#" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);"><i
+                                class="medium material-icons">perm_media</i></a>
                     </div>
                 </div>
-                <div class="modal-footer">
-                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
-                </div>
             </div>
-            <!--Acerca de...-->
-            <div class="row container">
-                <div class="section">
-                    <h5>Versión de Cordova</h5>
+            <div class="modal-footer">
+                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
+            </div>
+        </div>
+        <!--Acerca de...-->
+        <div class="row container">
+            <div class="section">
+                <h5>Versión de Cordova</h5>
 
-                    <p>La versión de Cordova en la que fue desarrollada <strong>ConsejoFMatApp</strong> es <span
-                            id="versionCordova"></span></p>
-                </div>
-                <div class="divider"></div>
-                <div class="section">
-                    <h5>Modelo del Dispositivo</h5>
+                <p>La versión de Cordova en la que fue desarrollada <strong>ConsejoFMatApp</strong> es <span
+                        id="versionCordova"></span></p>
+            </div>
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Modelo del Dispositivo</h5>
 
-                    <p>El modelo del dispositivo donde fue desarrollada <strong>ConsejoFMatApp</strong> es <span
+                <p>El modelo del dispositivo donde se está ejecutando la aplicación <strong>ConsejoFMatApp</strong>
+                    es <span
                             id="modelo"></span></p>
-                </div>
-                <div class="divider"></div>
-                <div class="section">
-                    <h5>Sistema Operativo del Dispositivo</h5>
+            </div>
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Sistema Operativo del Dispositivo</h5>
 
-                    <p>El nombre del sistema operativo del dispositivo donde fue desarrollada
-                        <strong>ConsejoFMatApp</strong> es <span id="plataforma"></span></p>
-                </div>
-                <div class="divider"></div>
-                <div class="section">
-                    <h5>Versión del Sistema Operativo del Dispositivo</h5>
+                <p>El nombre del sistema operativo del dispositivo donde fue desarrollada
+                    <strong>ConsejoFMatApp</strong> es <span id="plataforma"></span></p>
+            </div>
+            <div class="divider"></div>
+            <div class="section">
+                <h5>Versión del Sistema Operativo del Dispositivo</h5>
 
-                    <p>La versión del sistema operativo del dispositivo donde fue desarrollada
-                        <strong>ConsejoFMatApp</strong> es <span id="versionSO"></span></p>
+                <p>La versión del sistema operativo del dispositivo donde fue desarrollada
+                    <strong>ConsejoFMatApp</strong> es <span id="versionSO"></span></p>
+            </div>
+        </div>
+
+        <footer class="page-footer #000000 black" data-position="fixed">
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2015 Consejo Estudiantil
+                    <a class="grey-text text-lighten-4 right"
+                       href="http://www.facebook.com/cestudiantilfmat/"><i></i>¡Danos like!</a>
                 </div>
             </div>
-
-            <footer class="page-footer #000000 black" data-position="fixed">
-                <div class="footer-copyright">
-                    <div class="container">
-                        © 2015 Consejo Estudiantil
-                        <a class="grey-text text-lighten-4 right"
-                           href="http://www.facebook.com/cestudiantilfmat/"><i></i>¡Danos like!</a>
-                    </div>
-                </div>
-            </footer>
-        </main>
-        <!-- Cargamos jQuery y materialize js -->
-        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                //Menú responsivo
-                $('.button-collapse').sideNav({
-                            menuWidth: 240,
-                            edge: 'left',
-                            closeOnClick: true
-                        }
-                );
-            });
-            document.addEventListener("deviceready", onDeviceReady, false);
-            function onDeviceReady() {
-                console.log(device.cordova);
-            }
-        </script>
-    </body>
+        </footer>
+    </main>
+    <!-- Cargamos jQuery y materialize js -->
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //Menú responsivo
+            $('.button-collapse').sideNav({
+                        menuWidth: 240,
+                        edge: 'left',
+                        closeOnClick: true
+                    }
+            );
+        });
+        document.addEventListener("deviceready", onDeviceReady, false);
+        function onDeviceReady() {
+            console.log(device.cordova);
+        }
+    </script>
+</body>
 </html>
