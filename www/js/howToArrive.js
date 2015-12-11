@@ -1,9 +1,9 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
+    navigator.geolocation.getCurrentPosition(onSuccessPosition, onErrorPosition);
     document.addEventListener("backbutton", onBackKeyDown, false);
     document.addEventListener("volumeupbutton", showSideNav, false);
-    navigator.geolocation.getCurrentPosition(onSuccessPosition, onErrorPosition);
 }
 
 function onBackKeyDown(e) {
