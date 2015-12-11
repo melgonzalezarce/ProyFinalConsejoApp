@@ -3,7 +3,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 var db;
 
 function onDeviceReady() {
-    db = window.openDatabase("usuarios", "1.0", "Usuarios", 200000);
+    db = window.openDatabase("consejofmat", "1.0", "Consejo FMAT", 200000);
     db.transaction(populateDBUsers, errorDB, SuccessDBUsers);
 
 }
@@ -14,6 +14,8 @@ function populateDBUsers(tx) {
     tx.executeSql('CREATE TABLE IF NOT EXISTS posts (id unique, student_name, carreer, message_type, message)');
 
     tx.executeSql('INSERT INTO users (id, name, password) VALUES (1, "meli", "123")');
+
+    alert('Base de datos creada de usuarios y posts(escribenos)');
 }
 
 function queryDBUsers(tx) {
@@ -23,16 +25,6 @@ function queryDBUsers(tx) {
 // Query the success callback
 //
 function querySuccessUsers(tx, results) {
-    //first get the number of rows in the result set
-    var len = results.rows.length;
-    var status = document.getElementById("result");
-    var string = "Rows: " + len + "<br/>";
-    string = "<table><tr><td>ID</td> <td>Heroe</td><td>Name</td></tr>"
-    for (var i = 0; i < len; i++) {
-        string += "<tr><td>" + results.rows.item(i).id + "</td>" + "<td>" + results.rows.item(i).heroe + "</td>" +
-            "<td>" + results.rows.item(i).name + "</td></tr>";
-    }
-    status.innerHTML = string;
 }
 
 function errorDB(err) {
