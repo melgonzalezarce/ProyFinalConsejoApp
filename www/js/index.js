@@ -3,10 +3,16 @@ document.addEventListener("deviceready", onDeviceReady, false);
 var db;
 
 function onDeviceReady() {
+
+    document.addEventListener("online", onOnline, false);
+
     db = window.openDatabase("consejofmat", "1.0", "Consejo FMAT", 200000);
     db.transaction(populateDBUsers, errorDB);
 }
 
+function onOnline() {
+    // Enviar mensajes de escribenos y fotos seleccionadas de cada evento.
+}
 function populateDBUsers(tx) {
     tx.executeSql('DROP TABLE IF EXISTS users');
     tx.executeSql('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT, name, password)');

@@ -2,6 +2,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
     document.addEventListener("backbutton", onBackKeyDown, false);
+    document.addEventListener("volumeupbutton", showSideNav, false);
 
     $(".phonecall").click(function () {
         callNumber(this);
@@ -18,6 +19,9 @@ function onBackKeyDown(e) {
     e.preventDefault();
 }
 
+function showSideNav() {
+    $('.button-collapse').sideNav('show');
+}
 
 function addContact(phone) {
     var number = $(phone).siblings('.phonenumber').val();

@@ -3,6 +3,7 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
     document.addEventListener("backbutton", onBackKeyDown, false);
+    document.addEventListener("volumeupbutton", showSideNav, false);
 
     $('.howToArrive').click(function () {
         var latlng = $(this).siblings('.latlng').val();
@@ -11,4 +12,8 @@ function onDeviceReady() {
 }
 function onBackKeyDown(e) {
     e.preventDefault();
+}
+
+function showSideNav() {
+    $('.button-collapse').sideNav('show');
 }

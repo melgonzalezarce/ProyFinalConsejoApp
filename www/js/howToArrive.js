@@ -2,11 +2,16 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
     document.addEventListener("backbutton", onBackKeyDown, false);
+    document.addEventListener("volumeupbutton", showSideNav, false);
     navigator.geolocation.getCurrentPosition(onSuccessPosition, onErrorPosition);
 }
 
 function onBackKeyDown(e) {
     e.preventDefault();
+}
+
+function showSideNav() {
+    $('.button-collapse').sideNav('show');
 }
 
 function onErrorPosition() {

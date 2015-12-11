@@ -5,7 +5,9 @@
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-    document.addEventListener("backbutton", onBackKeyDown, false)
+    document.addEventListener("backbutton", onBackKeyDown, false);
+    document.addEventListener("volumeupbutton", showSideNav, false);
+
     $('#versionCordova').text(device.cordova);
     $('#modelo').text(device.model);
     $('#plataforma').text(device.platform);
@@ -14,4 +16,8 @@ function onDeviceReady() {
 
 function onBackKeyDown(e) {
     e.preventDefault();
+}
+
+function showSideNav() {
+    $('.button-collapse').sideNav('show');
 }

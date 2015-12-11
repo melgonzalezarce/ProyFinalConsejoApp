@@ -15,7 +15,14 @@ function showSideNav() {
 }
 
 function sendSuggestion() {
-    db.transaction(addOfflineSuggestion, errorDB)
+    var networkState = navigator.connection.type;
+
+    //Se comenta porque mientas no esta implementado el WebService siempre se guarde en la base de datos local.
+    //if(networkState == Connection.NONE) {
+        db.transaction(addOfflineSuggestion, errorDB);
+    //} else {
+        //Enviamos la sugerencia a Web Service
+    //}
 }
 
 function addOfflineSuggestion(tx) {
