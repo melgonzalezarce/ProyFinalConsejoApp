@@ -1,162 +1,164 @@
 <!DOCTYPE html>
 <html lang="en" class="#e0e0e0 grey lighten-2">
-    <head>
-        <title>ConsejoFMatApp</title>
-        <meta charset="UTF-8">
-        <!-- Poder agregar iconos -->
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!-- Cargamos el CSS -->
-        <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+<head>
+    <title>ConsejoFMatApp</title>
+    <meta charset="UTF-8">
+    <!-- Poder agregar iconos -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Cargamos el CSS -->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
 
-        <script type="text/javascript" src="cordova.js"></script>
-        <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
 
-        <script src="js/escribenos.js"></script>
+    <script src="js/escribenos.js"></script>
 
-    </head>
-    <body>
-        <!--PANEL-->
-        <header>
-            <nav class="#000000 black lighten-4 ">
-                <ul id="slide-out" class="side-nav">
-                    <li>
-                        <div class="contactoPanel">
-                            <!-- Modal Trigger -->
-                            <button data-target="modal1" class="btn modal-trigger btn-floating white center" style="height: 150px; width: 150px;"
-                                    onclick="$('#modal1').openModal();">
-                                <img id="imagenPerfil" src="img/profile.jpg" alt="" class="responsive-img">
-                            </button>
-                        </div>
-                        <p class="#000000 black-text"><i class="tiny material-icons">face</i> Romario López Castillo</p>
-                    </li>
-                    <li><a href="novedades.html" class="waves-effect"><i class="tiny material-icons">new_releases</i>
-                        Novedades</a></li>
-                    <li><a href="eventosprox.html" class="waves-effect"><i class="tiny material-icons">today</i> Eventos
-                        Próximos</a></li>
-                    <li><a href="contactanos.html" class="waves-effect"><i class="tiny material-icons">contact_phone</i>
-                        Contáctanos</a></li>
-                    <li><a href="escribenos.html" class="waves-effect"><i class="tiny material-icons">textsms</i>
-                        Escríbenos</a></li>
-                    <li><a href="infoAcad.html" class="waves-effect"><i class="tiny material-icons">school</i>
-                        Información Académica</a>
-                    <li><a href="cuponera.html" class="waves-effect"><i class="tiny material-icons">view_carousel</i>
-                        Cuponera</a>
-                    <li><a href="acercaDe.html" class="waves-effect"><i class="tiny material-icons">android</i> Acerca
-                        de... </a>
-                </ul>
-                <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i
-                        class="medium material-icons">reorder</i></a>
-                <a href="#" class="brand-logo">Escríbenos</a>
-            </nav>
-        </header>
-        <main>
-            <div id="modal1" class="modal bottom-sheet">
-                <div class="modal-content">
-                    <h4>Cambiar foto de perfil.</h4>
-
-                    <div class="row">
-                        <div class="col s6 center">
-                            <a href="#" onclick="capturePhoto();"><i class="medium material-icons">camera_alt</i></a>
-                        </div>
-                        <div class="col s6 center">
-                            <a href="#" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);"><i
-                                    class="medium material-icons">perm_media</i></a>
-                        </div>
+</head>
+<body>
+    <!--PANEL-->
+    <header>
+        <nav class="#000000 black lighten-4">
+            <span style="font-size: x-large">Escribenos</span>
+            <ul id="slide-out" class="side-nav">
+                <li>
+                    <div class="contactoPanel">
+                        <!-- Modal Trigger -->
+                        <button data-target="modal1" class="btn modal-trigger btn-floating white center"
+                                style="height: 150px; width: 150px;"
+                                onclick="$('#modal1').openModal();">
+                            <img id="imagenPerfil" src="img/profile.jpg" alt="" class="responsive-img">
+                        </button>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
+                    <p class="#000000 black-text"><i class="tiny material-icons">face</i> Romario López Castillo</p>
+                </li>
+                <li><a href="novedades.html" class="waves-effect"><i class="tiny material-icons">new_releases</i>
+                    Novedades</a></li>
+                <li><a href="eventosprox.html" class="waves-effect"><i class="tiny material-icons">today</i> Eventos
+                    Próximos</a></li>
+                <li><a href="contactanos.html" class="waves-effect"><i class="tiny material-icons">contact_phone</i>
+                    Contáctanos</a></li>
+                <li><a href="escribenos.html" class="waves-effect"><i class="tiny material-icons">textsms</i>
+                    Escríbenos</a></li>
+                <li><a href="infoAcad.html" class="waves-effect"><i class="tiny material-icons">school</i>
+                    Información Académica</a>
+                <li><a href="cuponera.html" class="waves-effect"><i class="tiny material-icons">view_carousel</i>
+                    Cuponera</a>
+                <li><a href="acercaDe.html" class="waves-effect"><i class="tiny material-icons">android</i> Acerca
+                    de... </a>
+            </ul>
+            <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i
+                    class="medium material-icons">reorder</i></a>
+        </nav>
+    </header>
+    <main>
+        <div id="modal1" class="modal bottom-sheet">
+            <div class="modal-content">
+                <h4>Cambiar foto de perfil.</h4>
+
+                <div class="row">
+                    <div class="col s6 center">
+                        <a href="#" onclick="capturePhoto();"><i class="medium material-icons">camera_alt</i></a>
+                    </div>
+                    <div class="col s6 center">
+                        <a href="#" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);"><i
+                                class="medium material-icons">perm_media</i></a>
+                    </div>
                 </div>
             </div>
-            <!--Escríbenos-->
-            <section data-role="page" id="escribenos" class="#fafafa grey-text lighten-5">
-                <div class="container">
-                    <div class="row">
-                        <div class="col m10 offset-m1 s12">
-                            <div class="row">
-                                <form class="col s12">
-                                    <div class="row">
-                                        <div class="input-field col m6 s12">
-                                            <input id="nombre" type="text" class="validate" required>
-                                            <label for="nombre">Nombre</label>
-                                        </div>
+            <div class="modal-footer">
+                <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
+            </div>
+        </div>
+        <!--Escríbenos-->
+        <section data-role="page" id="escribenos" class="#fafafa grey-text lighten-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col m10 offset-m1 s12">
+                        <div class="row">
+                            <form class="col s12">
+                                <div class="row">
+                                    <div class="input-field col m6 s12">
+                                        <input id="nombre" type="text" class="validate" required>
+                                        <label for="nombre">Nombre</label>
                                     </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <label for="carrera">Carrera</label>
-                                            <br/>
-                                        </div>
-                                        <div class="input-field col s12">
-                                            <select class="browser-default" id="carrera" required>
-                                                <option value="" selected disabled>Selecciona tu carrera:</option>
-                                                <option value="LA">LA</option>
-                                                <option value="LCC">LCC</option>
-                                                <option value="LEM">LEM</option>
-                                                <option value="LIC">LIC</option>
-                                                <option value="LIS">LIS</option>
-                                                <option value="LM">LM</option>
-                                            </select>
-                                        </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <label for="carrera">Carrera</label>
+                                        <br/>
                                     </div>
-                                    <div class="divider"></div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <label>Tipo de Mensaje</label>
-                                            <br/>
-                                        </div>
-                                        <div class="input-field col m3 s4 center-align">
-                                            <input name="group1" type="radio" id="queja" required value="Queja"/>
-                                            <label for="queja">Queja</label>
-                                        </div>
-                                        <div class="input-field col m3 s4 center-align">
-                                            <input name="group1" type="radio" id="sugerencia" value="Sugerencia"/>
-                                            <label for="sugerencia">Sugerencia</label>
-                                        </div>
-                                        <div class="input-field col m3 s4 center-align">
-                                            <input name="group1" type="radio" id="comentario" value="Comentario"/>
-                                            <label for="comentario">Comentario</label>
-                                        </div>
+                                    <div class="input-field col s12">
+                                        <select class="browser-default" id="carrera" required>
+                                            <option value="" selected disabled>Selecciona tu carrera:</option>
+                                            <option value="LA">LA</option>
+                                            <option value="LCC">LCC</option>
+                                            <option value="LEM">LEM</option>
+                                            <option value="LIC">LIC</option>
+                                            <option value="LIS">LIS</option>
+                                            <option value="LM">LM</option>
+                                        </select>
                                     </div>
-                                    <div class="row">
-                                        <div class="input-field col s12">
-                                            <textarea id="mensaje" class="materialize-textarea" required></textarea>
-                                            <label for="mensaje">Mensaje</label>
-                                        </div>
+                                </div>
+                                <div class="divider"></div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <label>Tipo de Mensaje</label>
+                                        <br/>
                                     </div>
-                                    <div class="row">
-                                        <div class="col m12">
-                                            <p class="right-align">
-                                                <button class="btn btn-floating btn-large waves-effect waves-light" type="button" name="action"
-                                                onclick="sendSuggestion();">
-                                                    <i class="small material-icons">send</i>
-                                                    <!--debe guardar el msj en la bd y llevar a la pagina mensaje.html
-                                                    donde se muestran los msjs y tiene un back hacia novedades-->
-                                                </button>
-                                            </p>
-                                        </div>
+                                    <div class="input-field col m3 s4 center-align">
+                                        <input name="group1" type="radio" id="queja" required value="Queja"/>
+                                        <label for="queja">Queja</label>
                                     </div>
-                                </form>
-                            </div>
+                                    <div class="input-field col m3 s4 center-align">
+                                        <input name="group1" type="radio" id="sugerencia" value="Sugerencia"/>
+                                        <label for="sugerencia">Sugerencia</label>
+                                    </div>
+                                    <div class="input-field col m3 s4 center-align">
+                                        <input name="group1" type="radio" id="comentario" value="Comentario"/>
+                                        <label for="comentario">Comentario</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="input-field col s12">
+                                        <textarea id="mensaje" class="materialize-textarea" required></textarea>
+                                        <label for="mensaje">Mensaje</label>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col m12">
+                                        <p class="right-align">
+                                            <button class="btn btn-floating btn-large waves-effect waves-light"
+                                                    type="button" name="action"
+                                                    onclick="sendSuggestion();">
+                                                <i class="small material-icons">send</i>
+                                                <!--debe guardar el msj en la bd y llevar a la pagina mensaje.html
+                                                donde se muestran los msjs y tiene un back hacia novedades-->
+                                            </button>
+                                        </p>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-            </section>
-        </main>
+            </div>
+        </section>
+    </main>
 
 
-        <!-- Cargamos jQuery y materialize js -->
-        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
-        <script type="text/javascript" src="js/materialize.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                //Menú responsivo
-                $('.button-collapse').sideNav({
-                            menuWidth: 240,
-                            edge: 'left',
-                            closeOnClick: true
-                        }
-                );
-            });
-        </script>
-    </body>
+    <!-- Cargamos jQuery y materialize js -->
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //Menú responsivo
+            $('.button-collapse').sideNav({
+                        menuWidth: 240,
+                        edge: 'left',
+                        closeOnClick: true
+                    }
+            );
+        });
+    </script>
+</body>
 </html>
