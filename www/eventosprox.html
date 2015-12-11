@@ -19,7 +19,11 @@
         <ul id="slide-out" class="side-nav">
             <li>
                 <div class="contactoPanel">
-                    <img src="img/profile.jpg" alt="" class="circle responsive-img">
+                    <!-- Modal Trigger -->
+                    <button data-target="modal1" class="btn modal-trigger btn-floating white center" style="height: 150px; width: 150px;"
+                            onclick="$('#modal1').openModal();">
+                        <img id="imagenPerfil" src="img/profile.jpg" alt="" class="responsive-img">
+                    </button>
                 </div>
                 <p class="#000000 black-text"><i class="tiny material-icons">face</i> Romario López Castillo</p>
             </li>
@@ -46,6 +50,24 @@
 </header>
 
 <main>
+    <div id="modal1" class="modal bottom-sheet">
+        <div class="modal-content">
+            <h4>Cambiar foto de perfil.</h4>
+
+            <div class="row">
+                <div class="col s6 center">
+                    <a href="#" onclick="capturePhoto();"><i class="medium material-icons">camera_alt</i></a>
+                </div>
+                <div class="col s6 center">
+                    <a href="#" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);"><i
+                            class="medium material-icons">perm_media</i></a>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
+        </div>
+    </div>
     <!--Eventos Próximos-->
     <section data-role="page" id="eventosprox">
 

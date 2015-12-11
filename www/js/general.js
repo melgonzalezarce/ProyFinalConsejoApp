@@ -46,3 +46,10 @@ function getPhoto(source) {
     });
     $('#modal1').closeModal();
 }
+function abrirModal(tituloModal){
+    if(tituloModal==null){
+        tituloModal = "Enviar imagen";
+    }
+    $('#nombreModal').text(tituloModal);
+    $('#modal1').openModal();
+}

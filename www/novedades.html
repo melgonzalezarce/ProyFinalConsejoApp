@@ -11,7 +11,7 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script src="js/general.js"></script>
     </head>
-    <body class="" style="background-image: url('img/fondoborroso.PNG'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100% 100%;">
+    <body style="background-image: url('img/fondoborroso.PNG'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100% 100%;">
         <!--PANEL-->
         <header>
             <nav class="#000000 black lighten-4 ">
@@ -20,7 +20,7 @@
                         <div class="contactoPanel">
                             <!-- Modal Trigger -->
                             <button data-target="modal1" class="btn modal-trigger btn-floating white center" style="height: 150px; width: 150px;"
-                                    onclick="$('#modal1').openModal();">
+                                    onclick="abrirModal('Cambiar foto de perfil');">
                                 <img id="imagenPerfil" src="img/profile.jpg" alt="" class="responsive-img">
                             </button>
                         </div>
@@ -51,7 +51,7 @@
         <main>
             <div id="modal1" class="modal bottom-sheet">
                 <div class="modal-content">
-                    <h4>Cambiar foto de perfil.</h4>
+                    <h4 id="nombreModal"></h4>
 
                     <div class="row">
                         <div class="col s6 center">
@@ -81,7 +81,7 @@
                                         class="tiny material-icons hideNewBtn">phone</i> 999-999 9999.
                             </p>
                             <i class="small material-icons hideNewBtn">visibility_off</i> <i
-                                class="small material-icons"  onclick="$('#modal1').openModal();">publish</i>
+                                class="small material-icons"  onclick="abrirModal();">publish</i>
                         </div>
                     </li>
                     <li class="hideNew">
@@ -91,7 +91,7 @@
                             <p> Ya se encuentra publicada la calendarización de exámenes ordinarios correspondientes
                                 al semestre Agosto-Diciembre 2015. </p>
                             <i class="small material-icons hideNewBtn">visibility_off</i> <i
-                                class="small material-icons" onclick="$('#modal1').openModal();">publish</i>
+                                class="small material-icons" onclick="abrirModal();">publish</i>
                         </div>
                     </li>
                     <li class="hideNew">
@@ -103,7 +103,7 @@
                                 id.
                             </p>
                             <i class="small material-icons hideNewBtn">visibility_off</i> <i
-                                class="small material-icons" onclick="$('#modal1').openModal();">publish</i>
+                                class="small material-icons" onclick="abrirModal();">publish</i>
                         </div>
                     </li>
                     <li class="hideNew">
@@ -116,7 +116,7 @@
                                 que se presenta en la facultad.
                             </p>
                             <i class="small material-icons hideNewBtn">visibility_off</i> <i
-                                class="small material-icons" onclick="$('#modal1').openModal();">publish</i>
+                                class="small material-icons" onclick="abrirModal();">publish</i>
                         </div>
                     </li>
                     <li class="hideNew">
@@ -131,7 +131,7 @@
                                 eirmod consectetuer signiferumque eu per. In usu latine equidem dolores.
                                 Quo no falli viris intellegam, ut fugit veritus placerat per. </p>
                             <i class="small material-icons hideNewBtn">visibility_off</i> <i
-                                class="small material-icons" onclick="$('#modal1').openModal();">publish</i>
+                                class="small material-icons" onclick="abrirModal();">publish</i>
                         </div>
                     </li>
                 </ul>

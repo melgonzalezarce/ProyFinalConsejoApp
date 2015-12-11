@@ -18,7 +18,12 @@
                 <ul id="slide-out" class="side-nav">
                     <li>
                         <div class="contactoPanel">
-                            <img src="img/profile.jpg" alt="" class="circle responsive-img">
+                            <!-- Modal Trigger -->
+                            <button data-target="modal1" class="btn modal-trigger btn-floating white center"
+                                    style="height: 150px; width: 150px;"
+                                    onclick="$('#modal1').openModal();">
+                                <img id="imagenPerfil" src="img/profile.jpg" alt="" class="responsive-img">
+                            </button>
                         </div>
                         <p class="#000000 black-text"><i class="tiny material-icons">face</i> Romario López Castillo</p>
                     </li>
@@ -42,38 +47,67 @@
                 <a href="#" class="brand-logo">Acerca de</a>
             </nav>
         </header>
+        <main>
+            <!--Modal-->
+            <div id="modal1" class="modal bottom-sheet">
+                <div class="modal-content">
+                    <h4>Cambiar foto de perfil.</h4>
 
-        <div class="row container">
-            <div class="section">
-                <h5>Versión de Cordova</h5>
-                <p>La versión de Cordova en la que fue desarrollada <strong>ConsejoFMatApp</strong> es <span id="versionCordova"></span></p>
-            </div>
-            <div class="divider"></div>
-            <div class="section">
-                <h5>Modelo del Dispositivo</h5>
-                <p>El modelo del dispositivo donde fue desarrollada <strong>ConsejoFMatApp</strong> es <span id="modelo"></span></p>
-            </div>
-            <div class="divider"></div>
-            <div class="section">
-                <h5>Sistema Operativo del Dispositivo</h5>
-                <p>El nombre del sistema operativo del dispositivo donde fue desarrollada <strong>ConsejoFMatApp</strong> es <span id="plataforma"></span></p>
-            </div>
-            <div class="divider"></div>
-            <div class="section">
-                <h5>Versión del Sistema Operativo del Dispositivo</h5>
-                <p>La versión del sistema operativo del dispositivo donde fue desarrollada <strong>ConsejoFMatApp</strong> es <span id="versionSO"></span></p>
-            </div>
-        </div>
-
-        <footer class="page-footer #000000 black" data-position="fixed">
-            <div class="footer-copyright">
-                <div class="container">
-                    © 2015 Consejo Estudiantil
-                    <a class="grey-text text-lighten-4 right" href="http://www.facebook.com/cestudiantilfmat/"><i></i>¡Danos like!</a>
+                    <div class="row">
+                        <div class="col s6 center">
+                            <a href="#" onclick="capturePhoto();"><i class="medium material-icons">camera_alt</i></a>
+                        </div>
+                        <div class="col s6 center">
+                            <a href="#" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);"><i
+                                    class="medium material-icons">perm_media</i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
                 </div>
             </div>
-        </footer>
+            <!--Acerca de...-->
+            <div class="row container">
+                <div class="section">
+                    <h5>Versión de Cordova</h5>
 
+                    <p>La versión de Cordova en la que fue desarrollada <strong>ConsejoFMatApp</strong> es <span
+                            id="versionCordova"></span></p>
+                </div>
+                <div class="divider"></div>
+                <div class="section">
+                    <h5>Modelo del Dispositivo</h5>
+
+                    <p>El modelo del dispositivo donde fue desarrollada <strong>ConsejoFMatApp</strong> es <span
+                            id="modelo"></span></p>
+                </div>
+                <div class="divider"></div>
+                <div class="section">
+                    <h5>Sistema Operativo del Dispositivo</h5>
+
+                    <p>El nombre del sistema operativo del dispositivo donde fue desarrollada
+                        <strong>ConsejoFMatApp</strong> es <span id="plataforma"></span></p>
+                </div>
+                <div class="divider"></div>
+                <div class="section">
+                    <h5>Versión del Sistema Operativo del Dispositivo</h5>
+
+                    <p>La versión del sistema operativo del dispositivo donde fue desarrollada
+                        <strong>ConsejoFMatApp</strong> es <span id="versionSO"></span></p>
+                </div>
+            </div>
+
+            <footer class="page-footer #000000 black" data-position="fixed">
+                <div class="footer-copyright">
+                    <div class="container">
+                        © 2015 Consejo Estudiantil
+                        <a class="grey-text text-lighten-4 right"
+                           href="http://www.facebook.com/cestudiantilfmat/"><i></i>¡Danos like!</a>
+                    </div>
+                </div>
+            </footer>
+        </main>
         <!-- Cargamos jQuery y materialize js -->
         <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
