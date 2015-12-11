@@ -12,6 +12,7 @@ function onDeviceReady() {
 
 function onOnline() {
     // Enviar mensajes de escribenos y fotos seleccionadas de cada evento.
+    alert('Conectado a internet, enviando fotos y mensajes de Escribenos');
 }
 function populateDBUsers(tx) {
     tx.executeSql('DROP TABLE IF EXISTS users');
