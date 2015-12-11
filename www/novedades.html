@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" style="background-image: url('img/fondoprincipal.jpg'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100% 100%;">
+<html lang="en"
+      style="background-image: url('img/fondoprincipal.jpg'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100% 100%;">
     <head>
         <title>ConsejoFMatApp</title>
         <meta charset="UTF-8">
@@ -17,10 +18,11 @@
             <nav class="#000000 black lighten-4 ">
                 <ul id="slide-out" class="side-nav">
                     <li>
-                        <div class="contactoPanel" style="height: 50px; width: auto">
+                        <div class="contactoPanel">
                             <!-- Modal Trigger -->
-                            <button data-target="modal1" class="btn modal-trigger btn-floating white" onclick="$('#modal1').openModal();">
-                                <img id="imangenPerfil" src="img/profile.jpg" alt="" class="circle responsive-img">
+                            <button data-target="modal1" class="btn modal-trigger btn-floating white center" style="height: 150px; width: 150px;"
+                                    onclick="$('#modal1').openModal();">
+                                <img id="imagenPerfil" src="img/profile.jpg" alt="" class="responsive-img">
                             </button>
                         </div>
                         <p class="#000000 black-text"><i class="tiny material-icons">face</i> Romario López Castillo</p>
@@ -51,9 +53,15 @@
             <div id="modal1" class="modal bottom-sheet">
                 <div class="modal-content">
                     <h4>Cambiar foto de perfil.</h4>
+
                     <div class="row">
-                        <a href="#" onclick="capturePhoto();"><i class="medium material-icons col s6">camera_alt</i></a>
-                        <a href="#" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);"><i class="medium material-icons col s6">perm_media</i></a>
+                        <div class="col s6 center">
+                            <a href="#" onclick="capturePhoto();"><i class="medium material-icons">camera_alt</i></a>
+                        </div>
+                        <div class="col s6 center">
+                            <a href="#" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);"><i
+                                    class="medium material-icons">perm_media</i></a>
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -64,13 +72,17 @@
             <section data-role="page" id="novedades">
                 <ul class="collapsible popout" data-collapsible="accordion">
                     <li class="hideNew">
-                        <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Reporte de Extravío de un Celular</strong></div>
+                        <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Reporte de
+                            Extravío de un Celular</strong></div>
                         <div class="collapsible-body card-panel #f4ff81 lime accent-1" style="text-align: justify">
-                            <p> Un compañero de LCC solicita nuestra ayuda para recuperar su teléfono <strong>Sony Xperia Z2 color negro con funda azul</strong>,
+                            <p> Un compañero de LCC solicita nuestra ayuda para recuperar su teléfono <strong>Sony
+                                Xperia Z2 color negro con funda azul</strong>,
                                 extraviado el día jueves 13 de Septiembre, en la cafetería de la escuela. <br>
-                                Si tienes informes comunícate al: <br> <i class="tiny material-icons hideNewBtn">phone</i> 999-999 9999.
+                                Si tienes informes comunícate al: <br> <i
+                                        class="tiny material-icons hideNewBtn">phone</i> 999-999 9999.
                             </p>
-                            <i class="small material-icons hideNewBtn">visibility_off</i> <i class="small material-icons">publish</i>
+                            <i class="small material-icons hideNewBtn">visibility_off</i> <i
+                                class="small material-icons">publish</i>
                         </div>
                     </li>
                     <li class="hideNew">
@@ -79,39 +91,48 @@
                         <div class="collapsible-body card-panel blue lighten-3" style="text-align: justify">
                             <p> Ya se encuentra publicada la calendarización de exámenes ordinarios correspondientes
                                 al semestre Agosto-Diciembre 2015. </p>
-                            <i class="small material-icons hideNewBtn">visibility_off</i> <i class="small material-icons">publish</i>
+                            <i class="small material-icons hideNewBtn">visibility_off</i> <i
+                                class="small material-icons">publish</i>
                         </div>
                     </li>
                     <li class="hideNew">
-                        <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Carga de Materias</strong></div>
+                        <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Carga de
+                            Materias</strong></div>
                         <div class="collapsible-body card-panel light-green accent-2" style="text-align: justify">
                             <p> Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in,
                                 eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint
                                 id.
                             </p>
-                            <i class="small material-icons hideNewBtn">visibility_off</i> <i class="small material-icons">publish</i>
+                            <i class="small material-icons hideNewBtn">visibility_off</i> <i
+                                class="small material-icons">publish</i>
                         </div>
                     </li>
                     <li class="hideNew">
-                        <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Fumigación en la Facultad</strong></div>
+                        <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Fumigación en
+                            la Facultad</strong></div>
                         <div class="collapsible-body card-panel #ffb74d orange lighten-2" style="text-align: justify">
                             <p>
-                            Se suspenden las clases del día 23 de Octubre, a partir de las 13:00 hrs, por motivo de la plaga de moscos
+                                Se suspenden las clases del día 23 de Octubre, a partir de las 13:00 hrs, por motivo de
+                                la plaga de moscos
                                 que se presenta en la facultad.
                             </p>
-                            <i class="small material-icons hideNewBtn">visibility_off</i> <i class="small material-icons">publish</i>
+                            <i class="small material-icons hideNewBtn">visibility_off</i> <i
+                                class="small material-icons">publish</i>
                         </div>
                     </li>
                     <li class="hideNew">
-                        <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Noticia 5</strong></div>
+                        <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Noticia
+                            5</strong></div>
                         <div class="collapsible-body card-panel #f48fb1 pink lighten-3" style="text-align: justify">
                             <p> Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in,
-                                eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id.
+                                eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint
+                                id.
                                 Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos.
                                 Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu,
                                 eirmod consectetuer signiferumque eu per. In usu latine equidem dolores.
                                 Quo no falli viris intellegam, ut fugit veritus placerat per. </p>
-                            <i class="small material-icons hideNewBtn">visibility_off</i> <i class="small material-icons">publish</i>
+                            <i class="small material-icons hideNewBtn">visibility_off</i> <i
+                                class="small material-icons">publish</i>
                         </div>
                     </li>
                 </ul>
