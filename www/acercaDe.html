@@ -32,7 +32,7 @@
                         Escríbenos</a></li>
                     <li><a href="infoAcad.html" class="waves-effect"><i class="tiny material-icons">school</i>
                         Información Académica</a>
-                    <li><a href="imagenes.html" class="waves-effect"><i class="tiny material-icons">view_carousel</i>
+                    <li><a href="cuponera.html" class="waves-effect"><i class="tiny material-icons">view_carousel</i>
                         Cuponera</a>
                     <li><a href="acercaDe.html" class="waves-effect"><i class="tiny material-icons">android</i> Acerca
                         de... </a>
@@ -42,6 +42,15 @@
                 <a href="#" class="brand-logo">Acerca de</a>
             </nav>
         </header>
+
+        <footer class="page-footer #000000 black">
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2015 Consejo Estudiantil
+                    <a class="grey-text text-lighten-4 right" href="http://www.facebook.com/cestudiantilfmat/"><i></i>¡Danos like!</a>
+                </div>
+            </div>
+        </footer>
 
         <!-- Cargamos jQuery y materialize js -->
         <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
@@ -56,6 +65,10 @@
                         }
                 );
             });
+            document.addEventListener("deviceready", onDeviceReady, false);
+            function onDeviceReady() {
+                console.log(device.cordova);
+            }
         </script>
     </body>
 </html>

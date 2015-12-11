@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="#9e9e9e grey">
+<html lang="en" style="background-image: url('img/fondoprincipal.jpg'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100% 100%;">
     <head>
         <title>ConsejoFMatApp</title>
         <meta charset="UTF-8">
@@ -7,23 +7,21 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!-- Cargamos el CSS -->
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
-
+        <!--JS-->
         <script type="text/javascript" src="cordova.js"></script>
         <script src="js/general.js"></script>
     </head>
-    <body>
+    <body class="">
         <!--PANEL-->
         <header>
             <nav class="#000000 black lighten-4 ">
-
                 <ul id="slide-out" class="side-nav">
-
-
                     <li>
                         <div class="contactoPanel" style="height: 50px; width: auto">
                             <!-- Modal Trigger -->
-                            <button data-target="modal1" class="btn modal-trigger" onclick="$('#modal1').openModal();">Modal</button>
-
+                            <button data-target="modal1" class="btn modal-trigger btn-floating white" onclick="$('#modal1').openModal();">
+                                <img id="imangenPerfil" src="img/profile.jpg" alt="" class="circle responsive-img">
+                            </button>
                         </div>
                         <p class="#000000 black-text"><i class="tiny material-icons">face</i> Romario López Castillo</p>
                     </li>
@@ -37,7 +35,7 @@
                         Escríbenos</a></li>
                     <li><a href="infoAcad.html" class="waves-effect"><i class="tiny material-icons">school</i>
                         Información Académica</a>
-                    <li><a href="imagenes.html" class="waves-effect"><i class="tiny material-icons">view_carousel</i>
+                    <li><a href="cuponera.html" class="waves-effect"><i class="tiny material-icons">view_carousel</i>
                         Cuponera</a>
                     <li><a href="acercaDe.html" class="waves-effect"><i class="tiny material-icons">android</i> Acerca
                         de... </a>
@@ -51,72 +49,68 @@
         <main>
             <div id="modal1" class="modal bottom-sheet">
                 <div class="modal-content">
-                    <h4>Modal Header</h4>
-                    <p>A bunch of text</p>
+                    <h4>Cambiar foto de perfil.</h4>
+                    <div class="row">
+                        <a href="#" onclick="capturePhoto();"><i class="medium material-icons col s6">camera_alt</i></a>
+                        <a href="#" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);"><i class="medium material-icons col s6">perm_media</i></a>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+                    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
                 </div>
             </div>
             <!--Novedades-->
             <section data-role="page" id="novedades">
                 <ul class="collapsible popout" data-collapsible="accordion">
                     <li class="hideNew">
-                        <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Calendario de
-                            Exámenes Ordinarios</strong></div>
-                        <div class="collapsible-body card-panel blue lighten-3">
-                            <p> Ya se encuentra publicada la calendarización de exámenes ordinarios correspondientes
-                                al semestre Agosto-Diciembre 2015. </p>
-                            <i class="small material-icons hideNewBtn">visibility</i> <i class="small material-icons">publish</i>
+                        <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Reporte de Extravío de un Celular</strong></div>
+                        <div class="collapsible-body card-panel #f4ff81 lime accent-1" style="text-align: justify">
+                            <p> Un compañero de LCC solicita nuestra ayuda para recuperar su teléfono <strong>Sony Xperia Z2 color negro con funda azul</strong>,
+                                extraviado el día jueves 13 de Septiembre, en la cafetería de la escuela. <br>
+                                Si tienes informes comunícate al: <br> <i class="tiny material-icons hideNewBtn">phone</i> 999-999 9999.
+                            </p>
+                            <i class="small material-icons hideNewBtn">visibility_off</i> <i class="small material-icons">publish</i>
                         </div>
                     </li>
                     <li class="hideNew">
-                        <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Noticia 2</strong></div>
-                        <div class="collapsible-body card-panel light-green accent-2">
+                        <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Calendario de
+                            Exámenes Ordinarios</strong></div>
+                        <div class="collapsible-body card-panel blue lighten-3" style="text-align: justify">
+                            <p> Ya se encuentra publicada la calendarización de exámenes ordinarios correspondientes
+                                al semestre Agosto-Diciembre 2015. </p>
+                            <i class="small material-icons hideNewBtn">visibility_off</i> <i class="small material-icons">publish</i>
+                        </div>
+                    </li>
+                    <li class="hideNew">
+                        <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Carga de Materias</strong></div>
+                        <div class="collapsible-body card-panel light-green accent-2" style="text-align: justify">
                             <p> Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in,
                                 eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint
                                 id.
-                                Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos.
-                                Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu,
-                                eirmod consectetuer signiferumque eu per. In usu latine equidem dolores.
-                                Quo no falli viris intellegam, ut fugit veritus placerat per. </p>
-                            <i class="small material-icons hideNewBtn">visibility</i> <i class="small material-icons">publish</i>
+                            </p>
+                            <i class="small material-icons hideNewBtn">visibility_off</i> <i class="small material-icons">publish</i>
                         </div>
                     </li>
                     <li class="hideNew">
-                        <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Noticia 3</strong></div>
-                        <div class="collapsible-body card-panel #ffb74d orange lighten-2">
-                            <p> Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in,
-                                eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id.
-                                Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos.
-                                Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu,
-                                eirmod consectetuer signiferumque eu per. In usu latine equidem dolores.
-                                Quo no falli viris intellegam, ut fugit veritus placerat per. </p>
-                            <i class="small material-icons hideNewBtn">visibility</i> <i class="small material-icons">publish</i>
-                        </div>
-                    </li>
-                    <li class="hideNew">
-                        <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Noticia 4</strong></div>
-                        <div class="collapsible-body card-panel #ffb74d orange lighten-2">
-                            <p> Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in,
-                                eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id.
-                                Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos.
-                                Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu,
-                                eirmod consectetuer signiferumque eu per. In usu latine equidem dolores.
-                                Quo no falli viris intellegam, ut fugit veritus placerat per. </p>
-                            <i class="small material-icons hideNewBtn">visibility</i> <i class="small material-icons">publish</i>
+                        <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Fumigación en la Facultad</strong></div>
+                        <div class="collapsible-body card-panel #ffb74d orange lighten-2" style="text-align: justify">
+                            <p>
+                            Se suspenden las clases del día 23 de Octubre, a partir de las 13:00 hrs, por motivo de la plaga de moscos
+                                que se presenta en la facultad.
+                            </p>
+                            <i class="small material-icons hideNewBtn">visibility_off</i> <i class="small material-icons">publish</i>
                         </div>
                     </li>
                     <li class="hideNew">
                         <div class="collapsible-header"><i class="material-icons">new_releases</i><strong>Noticia 5</strong></div>
-                        <div class="collapsible-body card-panel #ffb74d orange lighten-2">
+                        <div class="collapsible-body card-panel #f48fb1 pink lighten-3" style="text-align: justify">
                             <p> Lorem ipsum ad his scripta blandit partiendo, eum fastidii accumsan euripidis in,
                                 eum liber hendrerit an. Qui ut wisi vocibus suscipiantur, quo dicit ridens inciderint id.
                                 Quo mundi lobortis reformidans eu, legimus senserit definiebas an eos.
                                 Eu sit tincidunt incorrupte definitionem, vis mutat affert percipit cu,
                                 eirmod consectetuer signiferumque eu per. In usu latine equidem dolores.
                                 Quo no falli viris intellegam, ut fugit veritus placerat per. </p>
-                            <i class="small material-icons hideNewBtn">visibility</i> <i class="small material-icons">publish</i>
+                            <i class="small material-icons hideNewBtn">visibility_off</i> <i class="small material-icons">publish</i>
                         </div>
                     </li>
                 </ul>

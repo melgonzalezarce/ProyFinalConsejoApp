@@ -1,5 +1,5 @@
 document.addEventListener("deviceready", onDeviceReady, false);
-
+//Manejo de Eventos
 function onDeviceReady() {
     $(".hideNewBtn").click(function () {
         $(this).parents('.hideNew').remove();
@@ -8,7 +8,7 @@ function onDeviceReady() {
     document.addEventListener("volumeupbutton", showSideNav, false);
 
 }
-
+//Panel
 function showSideNav() {
     $('.button-collapse').sideNav('show');
 }
@@ -17,4 +17,4 @@ function showSideNav() {
 function onBackKeyDown(e) {
     e.preventDefault();
 }
-
+//Camara
